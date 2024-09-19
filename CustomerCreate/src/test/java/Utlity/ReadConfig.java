@@ -3,10 +3,9 @@ package Utlity;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-//import java.io.InputStream;
 import java.util.Properties;
 
-//import com.google.j2objc.annotations.Property;
+
 
 public class ReadConfig {
 	
@@ -17,27 +16,23 @@ public class ReadConfig {
 		
 		properties = new Properties();
 		
-		//FileInputStream fis = new FileInputStream(path);
-		System.out.println("i am here");
 		try {
-			FileInputStream fis = new FileInputStream(path);
-		} catch (FileNotFoundException e) {
-			
-			e.printStackTrace();
-			
+			properties.load(new FileInputStream(path));
 		}catch (IOException e) {
-			
-			e.printStackTrace();
+			System.out.println("Error to read");
 		}
+		
 	}
 	
-		
-	
 		public String getURL() {
-			String  url = properties.getProperty("url");
-			return url;
+			return properties.getProperty("url");
+			//return url;
 			
 		}
+		
+		public String getBrowser() {
+	        return properties.getProperty("browser");
+	    }
 		
 	
 }
