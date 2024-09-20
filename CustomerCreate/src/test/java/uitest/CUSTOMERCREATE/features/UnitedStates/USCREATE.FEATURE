@@ -8,9 +8,9 @@
 Feature: USCreate Request
   I want to use this Script for Create Request for UnitedState in CustomerCreate
 
-  @tag1
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
+   @cp1tc01
+  Scenario: Logon_CreateCMR_Positive_Testing_TC01
+    Given user enters url to launch the CreateCMR application
     And some other precondition
     When I complete action
     And some other action

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import Utlity.ReadConfig;
 
+//@author Mohammad Danish
 public class CustomerCreate{
 	private WebDriver driver;
 	private ReadConfig config;

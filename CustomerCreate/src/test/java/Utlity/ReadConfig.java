@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-
+//@Author Mohammad Danish
 
 public class ReadConfig {
 	
