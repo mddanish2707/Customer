@@ -1,40 +1,35 @@
 package CustomerCreate.CustomerCreate;
 
-import org.testng.annotations.BeforeTest;
+import java.util.concurrent.TimeUnit;
 
-
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Utlity.ReadConfig;
-//import io.opentelemetry.sdk.autoconfigure.spi.ConfigProperties;
 
-// https://cirdc-custcr-ui-request-uat.wdc1a.ciocloud.nonprod.intranet.ibm.comimport java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.By;
-public class CustomerCreate {
-
+public class CustomerCreate{
+	private WebDriver driver;
+	private ReadConfig config;
 	
-	//@BeforeTest  
-	public static void main(String args[]) throws Exception {
-		WebDriver driver;			
+	@BeforeClass
+	public void setUp() throws Exception {
+		config = new ReadConfig();
+		//System.setProperty("webdriver.firefox", "");
 		driver = new FirefoxDriver();
-		
-		ReadConfig ConfigFile = new ReadConfig();
-		driver.get(ConfigFile.getURL());
-//		ReadConfig config;
-//		config = new ReadConfig();
-//		System.out.println(config.LoginUrl());
-//		//System.setProperty("webdriver.chrome.driver", "C:\\Program Files");
-//		
-//		
-//		driver.get("C:\\Users\\002G55744\\eclipse-workspace\\CustomerCreate_AutomationTesting\\Testdata\\config.properties");
-//		
-//		
-		
-		
-		
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
 	}
+	@Test
+	public void OpenUrl() {
+		driver.get(config.getURL());
+	}
+	@AfterClass
+    public void tearDown() {
+        driver.quit();
+    }
+	
 }
