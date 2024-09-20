@@ -6,11 +6,10 @@ import java.io.IOException;
 import java.util.Properties;
 
 
-
 public class ReadConfig {
 	
 	Properties properties;
-	String path = "C:\\Users\\002G55744\\eclipse-workspace\\CustomerCreate_AutomationTesting\\Testdata\\config.properties";
+	String path = "C:\\Users\\003VQD744\\Documents\\GitHub\\Customer\\CustomerCreate\\Testdata\\config.properties";
 	
 	public  ReadConfig() throws Exception  {
 		
@@ -33,6 +32,11 @@ public class ReadConfig {
 		public String getBrowser() {
 	        return properties.getProperty("browser");
 	    }
+		
+		public String getProp(String keyToSearch)
+		{
+			return properties.getProperty(keyToSearch);
+		}
 		
 	
 }
