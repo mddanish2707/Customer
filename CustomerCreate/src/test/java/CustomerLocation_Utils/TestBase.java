@@ -37,19 +37,19 @@ public class TestBase {
     this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
   }
 
-  public void startDriver() throws Exception {
-
-    String browserName = config.getBrowser();
-    if (browserName.equalsIgnoreCase("FirefoxFF")) {
-    	System.setProperty("webdriver.gecko.driver", config.getProp("browserPathFolder") + "geckodriverFF.exe");
-    	driver = new FirefoxDriver();
-    	System.out.println("Firefox Driver Instance loaded successfully.");
-    }
-    else if (browserName.equalsIgnoreCase("Firefox")) {
-      System.setProperty("webdriver.gecko.driver", config.getProp("browserPathFolder") + "geckodriver.exe");
-     driver = new FirefoxDriver();
-      System.out.println("Firefox Driver Instance loaded successfully.");
-    } else if (browserName.equalsIgnoreCase("Firefox Nightly")) {
+  public void setUp() throws Exception {
+	  config = new ReadConfig(); 
+	  String browserName = config.getBrowser();
+	  if (browserName.equalsIgnoreCase("FirefoxFF")) {
+		  System.setProperty("webdriver.gecko.driver", config.getProp("browserPathFolder") + "geckodriverFF.exe");
+		  driver = new FirefoxDriver();
+		  System.out.println("Firefox Driver Instance loaded successfully.");
+	  }
+	  else if (browserName.equalsIgnoreCase("Firefox")) {
+		  System.setProperty("webdriver.gecko.driver", config.getProp("browserPathFolder") + "geckodriver.exe");
+		  driver = new FirefoxDriver();
+		  System.out.println("Firefox Driver Instance loaded successfully.");
+	  } else if (browserName.equalsIgnoreCase("Firefox Nightly")) {
       System.setProperty("webdriver.gecko.driver", config.getProp("browserPathFolder") + "geckodriverNEW.exe");
       driver = new FirefoxDriver();
   	  System.out.println("Firefox Nightly Driver Instance loaded successfully.");
