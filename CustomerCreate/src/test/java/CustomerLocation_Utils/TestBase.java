@@ -67,7 +67,7 @@ public class TestBase {
     }
 
     driver.manage().window().maximize();
-    this.setDriver(driver);
+    this.setDriver(driver);  // Set the driver in TestBase class
     driver.get(this.config.getURL());
 
   }

@@ -22,11 +22,9 @@ public class CustomerCreate extends TestBase{
 	@BeforeClass
 	public void setUp() throws Exception {
 		config = new ReadConfig();
-		super.setUp();
+		testBase = new TestBase();
+		testBase.setUp();    
 		driver = testBase.getDriver();
-//		driver = new FirefoxDriver();
-//		driver.manage().window().maximize();
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         
 	}
 	@Test

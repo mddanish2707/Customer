@@ -26,7 +26,6 @@ public class ReadConfig {
 	
 		public String getURL() {
 			return properties.getProperty("url");
-			//return url;
 			
 		}
 		
