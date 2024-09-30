@@ -11,12 +11,11 @@ Feature: USCreate Request
    @cp1tc01
   Scenario: Logon_CreateCMR_Positive_Testing_TC01
     Given user enters url to launch the CreateCMR application
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
+    Then click on CreateNewRequest 
+    And  click on issuing country
+    And  click on Request Type
+    Then click on New Request
+    
 
   @tag2
   Scenario Outline: Title of your scenario outline

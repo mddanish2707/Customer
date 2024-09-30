@@ -10,8 +10,13 @@ import org.testng.annotations.Test;
 
 import Utlity.ReadConfig;
 
+<<<<<<< Updated upstream
 //@author Mohammad Danish
 public class CustomerCreate{
+=======
+//@author Mohammad Danish @kritika Basak
+public class CustomerCreate extends TestBase{
+>>>>>>> Stashed changes
 	private WebDriver driver;
 	private ReadConfig config;
 	
@@ -28,9 +33,18 @@ public class CustomerCreate{
 	public void OpenUrl() {
 		driver.get(config.getURL());
 	}
+<<<<<<< Updated upstream
 	@AfterClass
     public void tearDown() {
         driver.quit();
     }
 	
+=======
+//	@AfterClass
+//    public void tearDown() {
+//		if (driver != null) {
+//        driver.quit();
+//		}
+//    }
+>>>>>>> Stashed changes
 }
