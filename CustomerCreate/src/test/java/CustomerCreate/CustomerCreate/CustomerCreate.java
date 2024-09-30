@@ -9,42 +9,37 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Utlity.ReadConfig;
+import java.util.Properties;
+import CustomerLocation_Utils.TestBase;
 
-<<<<<<< Updated upstream
-//@author Mohammad Danish
-public class CustomerCreate{
-=======
-//@author Mohammad Danish @kritika Basak
+
+
+
 public class CustomerCreate extends TestBase{
->>>>>>> Stashed changes
+
 	private WebDriver driver;
 	private ReadConfig config;
+	private TestBase testBase;
 	
 	@BeforeClass
 	public void setUp() throws Exception {
 		config = new ReadConfig();
-		//System.setProperty("webdriver.firefox", "");
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		testBase = new TestBase();
+		testBase.setUp();    
+		driver = testBase.getDriver();
         
 	}
 	@Test
 	public void OpenUrl() {
 		driver.get(config.getURL());
 	}
-<<<<<<< Updated upstream
+
+
 	@AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
-	
-=======
-//	@AfterClass
-//    public void tearDown() {
-//		if (driver != null) {
-//        driver.quit();
-//		}
-//    }
->>>>>>> Stashed changes
+   public void tearDown() {
+		if (driver != null) {
+       driver.quit();
+		}
+   }
+
 }

@@ -17,9 +17,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import Utlity.ReadConfig;
 
 
-//@Mohammad Danish @kritika Basak
-
-
 public class TestBase {
 
   private WebDriver driver;
