@@ -13,8 +13,10 @@ import java.util.Properties;
 import CustomerLocation_Utils.TestBase;
 
 
-//@author Mohammad Danish
+
+
 public class CustomerCreate extends TestBase{
+
 	private WebDriver driver;
 	private ReadConfig config;
 	private TestBase testBase;
@@ -31,11 +33,13 @@ public class CustomerCreate extends TestBase{
 	public void OpenUrl() {
 		driver.get(config.getURL());
 	}
+
+
 	@AfterClass
-    public void tearDown() {
+   public void tearDown() {
 		if (driver != null) {
-        driver.quit();
+       driver.quit();
 		}
-    }
-	
+   }
+
 }

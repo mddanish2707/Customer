@@ -16,6 +16,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import Utlity.ReadConfig;
 
+
 public class TestBase {
 
   private WebDriver driver;
